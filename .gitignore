@@ -1,0 +1,3 @@
+.env
+jobs/enabled/*
+!jobs/enabled/.gitkeep
