@@ -7,7 +7,7 @@ Make sure you fulfill all the requirements:
 * Run script preferably as **root** as you store a lot of secrets in `.env`.
 * The user which is running the backup script needs to have access to the backup storage via a **ssh key** at least for `rsync` in order to run this script e.g. as a cron job.
 
-Either clone this repo or download its content to the server that you want to backup files off, e.g. to `/opt/backup-rsync`.
+Either clone this repo or download the [latest release](https://github.com/ToolTime-Berlin/backup-rsync/releases/latest) to the server that you want to backup files off, e.g. to `/opt/backup-rsync`.
 Choose the jobs you want to run by enabling them. For that you need to symlink an available job from `./jobs/available/[jobname].sh` to `./jobs/enabled/[jobname].sh`.
 
 ### Optional
