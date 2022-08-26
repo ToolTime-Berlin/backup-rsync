@@ -17,7 +17,7 @@ jobs:
       - name: Create release archive
         run: |
           cd ${{ github.workspace }}
-          find . -path ./lib -prune -o -name '*.sh' -print -exec chmod 700 {} +
+          find . \( -path ./lib -prune -o -name '*.sh' -print \) -o  -name 'backup-rsync' -print -exec chmod 700 {} +
           find . -type d -exec chmod 700 {} +
           chmod 600 .env.example
           tar -vczf /tmp/${{ steps.vars.outputs.release-file }} --owner=0 --group=0 --no-same-owner --exclude='.git*' ../backup-rsync
